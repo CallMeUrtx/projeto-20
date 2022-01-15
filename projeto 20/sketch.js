@@ -5,7 +5,7 @@ var bgImg
 function preload() {
   //carregue as imagens aqui
 
-  bgImg = loadAnimation('images/garden.png')
+  bgImg = loadAnimation('garden.png')
   cat1 = loadAnimation('images/cat1.png')
   cat2 = loadAnimation('images/cat2.png', 'images/cat3.png')
   cat3 = loadAnimation('images/cat4.png')

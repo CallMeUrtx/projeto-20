@@ -5,7 +5,7 @@ var bgImg
 function preload() {
   //carregue as imagens aqui
 
-  bgImg = loadAnimation('garden.png')
+  bgImg = loadImage('garden.png')
   cat1 = loadAnimation('images/cat1.png')
   cat2 = loadAnimation('images/cat2.png', 'images/cat3.png')
   cat3 = loadAnimation('images/cat4.png')
@@ -17,9 +17,6 @@ function preload() {
 function setup() {
   var canvas = createCanvas(1000, 800)
   //crie os sprites de gato e rato aqui
-
-  bgImg.addImage('garden.png', garden)
-
   cat = createSprite(870, 600)
   cat.addAnimation('imagemGato', cat1)
   cat.scale = 0.2
@@ -30,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  background(255)
+  background(bgImg)
   //Escreva a condição aqui para avaliar se o gato e o rato colidem
   if (cat.x - mouse.x < (cat.width - mouse.width) / 2) {
     cat.velocityX = 0
@@ -39,8 +36,8 @@ function draw() {
     cat.x = 300
     cat.scale = 0.2
 
-    mouse.addAnimation("imagemRato", mouse4)
-    mouse.changeAnimation("imagemRato", mouse4)
+    mouse.addAnimation("imagemRato", mouse3)
+    mouse.changeAnimation("imagemRato", mouse3)
   }
   drawSprites()
 }
